@@ -1,0 +1,17 @@
+/*Standard stylesheet*/
+
+body {
+    font-family: Arial;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    color: #94a3b8;
+}
