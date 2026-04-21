@@ -6,10 +6,14 @@ const obs = new IntersectionObserver(e => {
 
 document.querySelectorAll(".reveal").forEach(e => obs.observe(e))
 
-const aboutText = "ablabalbalbalbalablabalbalbalbalbalabablablablalalbabla lorem ipsum dolor sit amet consecutur idk"
+const hourglass = document.querySelector(".hourglass")
+let angle = 0
+
+const aboutText = `I'm a Roblox modeler specializing in hard surface modeling, with a growing focus on UGC creation. I found this craft on my own and fell in love with the process.
+I have 3 months of experience and I always try my best to deliver the models you're looking for.`
 const aboutEl = document.getElementById("aboutText")
 
-const projectText = "if the cursor doesn't show istg"
+const projectText = ""
 const projectEl = document.getElementById("typed")
 
 let i = 0
@@ -35,6 +39,18 @@ function typeProject() {
     }
 }
 
+function stepRotate() {
+    angle += 100
+    hourglass.style.transition = "transform 0.2s linear"
+    hourglass.style.transform = `rotate(${angle}deg)`
+    setTimeout(() => {
+        hourglass.style.transition = "none"
+    }, 200)
+}
+
+setInterval(stepRotate, 1000)
+
+/* LOAD */
 window.addEventListener("load", () => {
     setTimeout(typeAbout, 500)
     setTimeout(typeProject, 1200)

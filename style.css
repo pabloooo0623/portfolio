@@ -127,29 +127,13 @@ body::before {
     color: rgba(160, 210, 255, 0.95);
 }
 
-/* hourglass correct timing */
 .hourglass {
     width: 26px;
     height: 26px;
     background: var(--cyan);
     -webkit-mask: url("src/hourglass.png") center/contain no-repeat;
     mask: url("src/hourglass.png") center/contain no-repeat;
-    animation: rotateCycle 1s linear infinite;
     transform-origin: center;
-}
-
-@keyframes rotateCycle {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    20% {
-        transform: rotate(120deg);
-    }
-
-    100% {
-        transform: rotate(120deg);
-    }
 }
 
 /* PORTFOLIO */
@@ -169,7 +153,7 @@ body::before {
 .entry-bg {
     position: absolute;
     inset: 0;
-    background: url("src/project1.jpeg") center/cover no-repeat;
+    background: url("src/project1.png") center/cover no-repeat;
     transform: scale(1.05);
 }
 
@@ -208,4 +192,37 @@ body::before {
     font-size: 16px;
     color: rgba(230, 250, 255, 0.9);
     min-height: 40px;
+}
+
+.socials {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.socials h2 {
+    margin-bottom: 28px;
+}
+
+.social-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.social-item img {
+    width: 28px;
+    height: 28px;
+}
+
+.social-item span {
+    font-size: 15px;
 }
