@@ -1,3 +1,4 @@
+/*font pkg*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@300;400;600;800&display=swap');
 
 :root {
@@ -90,7 +91,7 @@ body::before {
     min-height: 40px;
 }
 
-/* separator moved HERE */
+/* sep moved here cmd+f */
 .separator {
     width: 260px;
     height: 1px;
@@ -225,4 +226,28 @@ body::before {
 
 .social-item span {
     font-size: 15px;
+}
+
+.credit {
+    margin-top: 100px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: rgba(180, 210, 230, 0.45);
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    position: relative;
+}
+
+.credit::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    margin: 0 auto 12px auto;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.4;
+}
+
+.credit:hover {
+    color: rgba(200, 240, 255, 0.7);
 }
